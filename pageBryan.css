@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fundo: #1fcbba;
+  --texto_principais: #ffde59;
+  --texto_segundarios: #020435;
+  --rocho: #6e0aaf;
+  --marron:#af4531;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+	background: linear-gradient(-45deg, var(--fundo), var(--rocho));
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+body {
+  background-image: linear-gradient(to top right, var(--fundo), var(--rocho));
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay;
+}
+
+
+
+@import url(/src/css/page.css);
+
+
+/* Conteudo das páginas */
+
+
+a:hover {
+  color: var(--base-color-second);
+  transition: 0.2s ease-in;
+}
+
+a {
+  color: var(--base-black);
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* Fim Conteudo das páginas */
+
+/* Mobile */
+
+
+
+@media (max-width: 378px) {
+  .col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 378px) and (max-width: 576px) {
+  .col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .col {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-xl-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-xl-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+
+
+/* Fim Mobile */
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 16px;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--texto_principais);
+  -webkit-border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb:horizontal,
+::-webkit-scrollbar-thumb:vertical {
+  background-color: var(--texto_segundarios);
+  -webkit-border-radius: 3px;
+}
